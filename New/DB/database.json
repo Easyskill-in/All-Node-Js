@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1773911653642,
+    "username": "User1",
+    "email": "user@gmail.com"
+  },
+  [
+    {
+      "id": 1773911653642,
+      "username": "User1",
+      "email": "user@gmail.com"
+    }
+  ],
+  {
+    "id": 1773911655980,
+    "username": "User1",
+    "email": "user@gmail.com"
+  },
+  [
+    {
+      "id": 1773911653642,
+      "username": "User1",
+      "email": "user@gmail.com"
+    },
+    [
+      {
+        "id": 1773911653642,
+        "username": "User1",
+        "email": "user@gmail.com"
+      }
+    ],
+    {
+      "id": 1773911655980,
+      "username": "User1",
+      "email": "user@gmail.com"
+    }
+  ]
+]

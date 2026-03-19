@@ -1,0 +1,20 @@
+| Category  | Function              | Type  | What it Does                     |
+| --------- | --------------------- | ----- | -------------------------------- |
+| 📖 Read   | `fs.readFile()`       | Async | Reads entire file content        |
+| 📖 Read   | `fs.readFileSync()`   | Sync  | Reads file (blocking)            |
+| ✍️ Write  | `fs.writeFile()`      | Async | Creates or overwrites a file     |
+| ✍️ Write  | `fs.writeFileSync()`  | Sync  | Write file (blocking)            |
+| ➕ Append  | `fs.appendFile()`     | Async | Adds data to existing file       |
+| ➕ Append  | `fs.appendFileSync()` | Sync  | Append (blocking)                |
+| ❌ Delete  | `fs.unlink()`         | Async | Deletes a file                   |
+| ❌ Delete  | `fs.unlinkSync()`     | Sync  | Delete file (blocking)           |
+| ❌ Delete  | `fs.rm()`             | Async | Deletes file or folder (modern)  |
+| ❌ Delete  | `fs.rmSync()`         | Sync  | Delete file/folder (blocking)    |
+| 📁 Folder | `fs.mkdir()`          | Async | Creates a directory              |
+| 📁 Folder | `fs.mkdirSync()`      | Sync  | Create directory (blocking)      |
+| 📁 Folder | `fs.readdir()`        | Async | Lists files in a folder          |
+| 📁 Folder | `fs.readdirSync()`    | Sync  | List files (blocking)            |
+| 🔄 Move   | `fs.rename()`         | Async | Moves or renames file/folder     |
+| 🔄 Move   | `fs.renameSync()`     | Sync  | Move or rename (blocking)        |
+| ✔️ Exist  | `fs.existsSync()`     | Sync  | Checks if file/folder exists     |
+| ✔️ Exist  | `fs.access()`         | Async | Checks existence and permissions |
