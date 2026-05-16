@@ -1,0 +1,149 @@
+/* HomePage.css */
+
+
+/* Main Container */
+
+.home-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #eef2ff, #f8fbff);
+}
+
+/* Top Section */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.create-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.35);
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.create-btn:active {
+    transform: scale(0.98);
+}
+
+/* Posts Grid */
+
+.posts-container {
+    display: grid;
+    gap: 25px;
+}
+
+/* Single Post Card */
+
+.post-card {
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* User Section */
+
+.side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.side img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #667eea;
+}
+
+.side span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Post Content */
+
+.post {
+    background: #f8faff;
+    padding: 18px;
+    border-radius: 14px;
+    border-left: 5px solid #667eea;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Empty State */
+
+.empty-posts {
+    text-align: center;
+    margin-top: 80px;
+    color: #777;
+}
+
+.empty-posts h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+    }
+
+    .post-card {
+        padding: 18px;
+    }
+
+    .side img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+.like span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
