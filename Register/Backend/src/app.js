@@ -1,23 +1,33 @@
 const express = require('express');
 const cors = require('cors');
 const { WriteData, FindData, FindByUsername } = require('../database/Functions');
-const { FRONTEND_URL } = require('./Config/env');
+const { FRONTEND_URL, JWT_SECRET } = require('./Config/env');
 
 const bcrypt = require("bcrypt")
+const JWT = require("jsonwebtoken")
+const CookieParser = require("cookie-parser");
+const { JWT_Verify } = require('./Middleware/Auth');
 
 const app = express();
 
 // Middleware
 
 app.use(cors({
-    origin: FRONTEND_URL
+    origin: FRONTEND_URL,
+    credentials: true
 }))
 
+app.use(CookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.send('Server is running 🚀');
+app.get('/', JWT_Verify, (req, res) => {
+
+    res.json(
+        {
+            message: 'Server is running 🚀',
+            data: req.user
+        });
 });
 
 app.post("/submit", async (req, res) => {
@@ -90,6 +100,13 @@ app.post("/login", async (req, res) => {
         }
 
 
+
+        const token = JWT.sign(user, JWT_SECRET, { expiresIn: "1m" })
+
+        res.cookie("token", token, {
+            httpOnly: true,
+            maxAge: 1000 * 60
+        })
 
 
 
