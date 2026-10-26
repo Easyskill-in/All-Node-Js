@@ -7,7 +7,8 @@ import Register from './pages/Auth/Register'
 const App = () => {
   return (
     <div>
-      <h1>App Component</h1>
+      {/* <h1>App Component {import.meta.env.VITE_URL}</h1> */}
+      <h1>App Component {import.meta.env.VITE_URL}</h1>
       <hr />
 
       <ul className='links'>
